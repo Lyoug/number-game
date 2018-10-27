@@ -12,8 +12,12 @@ guess = min - 1     # anything different from solution
 
 print("I chose a number between", min, "and", max)
 while guess != solution and tries < max_tries:
-    # TODO add a try - except block to avoid crashing on input error
-    guess = int(input("How much? "))
+    while True:
+        try:
+            guess = int(input("How much? "))
+            break
+        except ValueError:
+            print("Please type an integer")
     if guess < solution:
         print("Too small")
     if guess > solution:
