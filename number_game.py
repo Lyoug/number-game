@@ -2,15 +2,15 @@
 
 import random
 
-min = 1
-max = 100
+lowest = 1
+highest = 100
 max_tries = 10
 
-solution = random.randint(min, max)
+solution = random.randint(lowest, highest)
 tries = 0
-guess = min - 1     # anything different from solution
+guess = lowest - 1     # anything different from solution
 
-print("I chose a number between", min, "and", max)
+print("I chose a number between", lowest, "and", highest)
 while guess != solution and tries < max_tries:
     while True:
         try:
